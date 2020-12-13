@@ -1,0 +1,167 @@
+@font-face {
+  font-family: "KumbhSans";
+  src: url(../fonts/KumbhSans-Regular.ttf);
+}
+
+:root {
+  --clr__one: hsl(185, 75%, 39%);
+  --clr__two: hsl(229, 23%, 23%);
+  --clr__three: hsl(227, 10%, 46%);
+
+  --neutral__one: hsl(0, 0%, 59%);
+
+  --ff: "KumbhSans";
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+span {
+  display: block;
+}
+
+body {
+  width: 100%;
+  font-family: var(--ff), sans-serif;
+  background: var(--clr__one);
+  font-size: 110%;
+  color: var(--clr__two);
+}
+
+.profile__img {
+  width: 100px;
+  position: absolute;
+  transform: translate(120%, 100%);
+  -webkit-transform: translate(120%, 100%);
+  -moz-transform: translate(120%, 100%);
+  -ms-transform: translate(120%, 100%);
+  left: 0;
+  right: 0;
+  border-radius: 50%;
+  border: 5px solid #fff;
+}
+
+.main__container {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.main__container::before,
+.main__container::after {
+  position: absolute;
+  z-index: -1;
+}
+
+.main__container::before {
+  content: url(../images/bg-pattern-top.svg);
+  transform: translate(-85%, -60%);
+  -webkit-transform: translate(-85%, -60%);
+  -moz-transform: translate(-85%, -60%);
+  -ms-transform: translate(-85%, -60%);
+  top: 0;
+  left: 0;
+}
+
+.main__container::after {
+  right: 0;
+  bottom: 0;
+  content: url(../images/bg-pattern-bottom.svg);
+  transform: translate(85%, 60%);
+  -webkit-transform: translate(85%, 60%);
+  -moz-transform: translate(85%, 60%);
+  -ms-transform: translate(85%, 60%);
+}
+
+.container {
+  width: 350px;
+  max-width: 100%;
+  text-align: center;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  display: grid;
+}
+
+.container .bg {
+  height: 150px;
+  background-image: url("../images/bg-pattern-card.svg");
+}
+
+.profile__body {
+  padding: 4em 0 0;
+  padding-top: 4em;
+}
+
+.profile__body h2 {
+  display: inline;
+  margin-right: 0.4em;
+  color: var(--clr__two);
+  font-weight: 700;
+  font-size: 1.4rem;
+}
+
+.profile__body span {
+  margin-bottom: 0.1em;
+  color: var(--clr__three);
+  font-size: 1.5rem;
+}
+
+.profile__body .profile__country {
+  margin-bottom: 2em;
+  font-size: 1.15rem;
+}
+
+.profile__status {
+  display: flex;
+  justify-content: space-between;
+  padding: 2em;
+  border-top: 1px solid var(--neutral__one);
+}
+
+.profile__status h3 {
+  margin-bottom: 5px;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.profile__status span {
+  margin: 0;
+  font-size: 0.8rem;
+}
+
+@media screen and (min-width: 1400px) {
+  .main__container::before {
+    content: url(../images/bg-pattern-top.svg);
+    transform: translate(-25%, -50%);
+    -webkit-transform: translate(-25%, -50%);
+    -moz-transform: translate(-25%, -50%);
+    -ms-transform: translate(-25%, -50%);
+    top: 0;
+    left: 0;
+  }
+
+  .main__container::after {
+    right: 0;
+    bottom: 0;
+    content: url(../images/bg-pattern-bottom.svg);
+    transform: translate(25%, 50%);
+    -webkit-transform: translate(25%, 50%);
+    -moz-transform: translate(25%, 50%);
+    -ms-transform: translate(25%, 50%);
+  }
+}
